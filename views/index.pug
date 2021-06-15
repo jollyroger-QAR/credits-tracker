@@ -1,0 +1,25 @@
+doctype html 
+html(lang='en')
+  head 
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;900&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='/css/style.css')
+  
+  body 
+    div.home-header
+      h3 Welcome to the simple credits tracker App
+      
+    div.main-content  
+    
+      div.credits-input
+        form(action="/" method="post" class="input-form")
+          input(type="text" placeholder="Class Name" required autocomplete="off" name="className")
+          
+          input(type="text" placeholder="Class ID" required autocomplete="off" name="classId")
+          
+          input(type="number" placeholder="Number of Credits" required autocomplete="off" name="numCredits")
+            
+          button(type="submit") Submit
+      
+      div.credits-list 
+        include credits/credit_display.pug
+      
