@@ -1,5 +1,4 @@
 const express   = require('express');
-const port      = 3000;
 const bodyParser = require('body-parser');
 const path      = require('path');
 const mongoose  = require('mongoose');
@@ -38,7 +37,7 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 // Run Server 
-app.listen(port, () => {
+app.listen(3000, () => {
   console.log("Running on local host: 3000");
 });
 

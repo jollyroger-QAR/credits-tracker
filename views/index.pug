@@ -3,13 +3,13 @@ html(lang='en')
   head 
     link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;900&display=swap' rel='stylesheet')
     link(rel='stylesheet' href='/css/style.css')
+    link(rel='stylesheet' href='/fonts/font-awesome-4.7.0/css/font-awesome.min.css')
   
   body 
     div.home-header
-      h3 Welcome to the simple credits tracker App
+      div.header-title
+        h3 Welcome to the simple credits tracker app
       
-    div.main-content  
-    
       div.credits-input
         form(action="/" method="post" class="input-form")
           input(type="text" placeholder="Class Name" required autocomplete="off" name="className")
@@ -19,7 +19,16 @@ html(lang='en')
           input(type="number" placeholder="Number of Credits" required autocomplete="off" name="numCredits")
             
           button(type="submit") Submit
+          
+      div.header-paragraph 
+        p Just enter the classes you have left, along with their id's and number of credits. The app will tell you how many classes you have left and how many credits are left.
+      
+    div.main-content  
+    
+      div.credits-totals
+        include credits/credit_totals.pug
       
       div.credits-list 
         include credits/credit_display.pug
+        
       
