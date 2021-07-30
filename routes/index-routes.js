@@ -6,7 +6,7 @@ const creditController = require('../controllers/credit-controller');
 router.get('/', creditController.display_credits);
 
 // Post route 
-router.post('/', creditController.add_credits);
+router.post('/add', creditController.add_credits);
 
 // Delete credit route 
 router.post('/delete', creditController.delete_credit);

@@ -24,8 +24,7 @@ exports.add_credits = (req, res, next) => {
   credit.save( (err) => {
     // If there's an error, continue on
     if (err) { return next(err) };
-    
-    console.log(credit)
+  
     // If save was successful, redirect back to the home page 
     res.redirect('/');
     
@@ -39,8 +38,7 @@ exports.delete_credit = (req, res, next) => {
   Credit.findById(req.body.creditId, (err, credit) => {
     credit.remove();
     credit.save();
-    console.log(credit);
-    
+  
     // Credit deleted. Redirect back to index page 
     res.redirect('/');
   }); 
