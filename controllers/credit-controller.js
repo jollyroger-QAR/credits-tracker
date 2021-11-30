@@ -36,10 +36,29 @@ exports.delete_credit = (req, res, next) => {
   
   // Delete credit from database 
   Credit.findById(req.body.creditId, (err, credit) => {
-    credit.remove();
-    credit.save();
+    
+    // Handle Mongoose-related errors 
+    if (err) { 
+      next(err);
+    } 
+    // Handle if Mongoose returns a null value 
+    else if (credit == null) {
+      // Get all credits from database, and render index page with delete error message. 
+      Credit.find({})
+        .exec((err, credits) => {
+          // If error, 
+          if (err) { return next(err); }
+          // If successful, render index page with list of credits and error message 
+          res.render('index', {credits: credits, error: "Class Delete Failed. Please reload the page."});
+        });
+    }
+    // Remove credit from database & save database 
+    else {
+      credit.remove();
+      credit.save();
+      // Credit deleted. Redirect back to index page 
+      res.redirect('/');
+    }
   
-    // Credit deleted. Redirect back to index page 
-    res.redirect('/');
   }); 
 };
