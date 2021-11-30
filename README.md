@@ -25,7 +25,8 @@ And that's it! Start entering your classes and keep track of where you're at.
 ## What I Learned Doing This Project 
 - Learned how to build a fully-functioning app using the node.js runetime and the express.js framework.
 - Developed a user interface with pug.js that accepted user inputs and communicated appropriately with the server.
-- Implemented a REST api with 2 endpoints: `/`, and `/delete`. 
+- Implemented a REST api with 3 endpoints: `/`, `/add` and `/delete`. 
+- Application supports basic CRUD operations.
 - Built a data model with Mongoose.js to interface with a locally connected MongoDB instance. 
 
 
