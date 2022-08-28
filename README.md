@@ -1,10 +1,9 @@
 # credits-tracker
-A Simple node.js app to keep track of university credits. 
-
+A Node.js app to keep track of university credits. 
 
 The goal of the project was to create a list of all the credits I have left in my program, so that I can visualize how many credits I need to graduate. 
 
-The app is meant to run locally in your web browser. 
+The app is meant to run locally in a web browser. 
 
 ## Instructions 
 
@@ -23,8 +22,8 @@ If all the dependencies are installed. To start the server, simply use:
 And that's it! Start entering your classes and keep track of where you're at. 
 
 ## What I Learned Doing This Project 
-- Learned how to build a fully-functioning app using the node.js runetime and the express.js framework.
-- Developed a user interface with pug.js that accepted user inputs and communicated appropriately with the server.
+- Learned how to build a fully-functioning app using the Node.js runtime and the Express.js framework.
+- Developed a user interface with pug.js that accepts user inputs and communicats appropriately with the server.
 - Implemented a REST api with 3 endpoints: `/`, `/add` and `/delete`. 
 - Application supports basic CRUD operations.
 - Built a data model with Mongoose.js to interface with a locally connected MongoDB instance. 
