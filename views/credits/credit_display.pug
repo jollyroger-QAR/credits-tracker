@@ -1,7 +1,13 @@
 if (credits != undefined)
-  each credit in credits 
-    div.credit-single 
-      p.credit-name= credit.name 
-      p.credit-id= credit.classId
-      p.credit-num= credit.credits
+  each credit in credits
+    div.credit-single
+      p.credit-name
+        strong Course Name:
+        span= credit.name
+      p.credit-id
+        strong Course Code:
+        span= credit.classId
+      p.credit-num
+        strong Credits:
+        span= credit.credits
       include delete_credit.pug

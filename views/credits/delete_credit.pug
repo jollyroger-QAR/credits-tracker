@@ -1,3 +1,2 @@
-form(method="post" action="/delete").credit-delete 
-  input(type='hidden' name="creditId" required="true" value=credit.id)
+form(method="post" action=`/delete/${credit.id}`).credit-delete
   button(type='submit').fa.fa-trash.delete-item-button
